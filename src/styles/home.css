@@ -1,0 +1,22 @@
+header{
+    width: 80%;
+    height: fit-content;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li{
+    list-style: none;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+header nav ul li:hover{
+    color: hsl(5, 85%, 63%);
+}
