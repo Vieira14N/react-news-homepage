@@ -31,28 +31,108 @@ header nav ul li:hover{
     margin: 50px auto;
     display: grid;
     grid-template:
-    "main__cover main__cover main__sidenav" 200px
-    "main__title main__text main__sidenav" 200px
-    / 200px 200px 200px;
-}
-
-.main div {
-    width: 200px;
+    "cover cover sidenav" auto
+    "title text sidenav" auto
+    / 1fr 1fr 1fr;
+    gap: 25px;
 }
 
 .main__cover {
-    background-color: blue;
+    grid-area: cover;
+}
+
+.main__cover img {
+    width: 100%;
 }
 
 .main__title {
-    background-color: red;
+    grid-area: title;
+}
+
+.main__title h1 {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 54px;
 }
 
 .main__text {
-    background-color: green;
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding-right: 10px;
+}
+
+.main__text p {
+    font-size: 14px;
+    line-height: 24px;
+    color: hsl(236, 13%, 42%);
+}
+
+.main__text button {
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    border: none;
+    padding: 10px 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.main__text button:hover{
+    background-color: hsl(240, 100%, 5%);
 }
 
 .main__sidenav{
-    background-color: yellow;
+    background-color: hsl(240, 100%, 5%);
+    grid-area: sidenav;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.main__sidenav .bar{
+    border-bottom: 2px solid hsla(236, 13%, 42%,0.4);
+    margin-top: 30px;
+}
+
+.main__sidenav h2 {
+    color: hsl(35, 77%, 62%);
+    font-size: 32px;
+}
+
+.main__sidenav h3 {
+    color:hsl(36, 100%, 99%);
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.main__sidenav h3:hover{
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+.main__sidenav p{
+    color: hsl(236, 13%, 42%);
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/* Footer */
+
+footer {
+    width: 80%;
+    height: fit-content;
+    margin: 50px auto;
+    display: grid;
+    grid-template:
+    "article article article " auto
+    / 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+footer div {
+    background-color: aqua;
+}
