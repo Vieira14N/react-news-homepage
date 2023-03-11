@@ -1,3 +1,5 @@
+/* Header */
+
 header{
     width: 80%;
     height: fit-content;
@@ -20,3 +22,37 @@ header nav ul li{
 header nav ul li:hover{
     color: hsl(5, 85%, 63%);
 }
+
+/* Main section */
+
+.main {
+    width: 80%;
+    height: fit-content;
+    margin: 50px auto;
+    display: grid;
+    grid-template:
+    "main__cover main__cover main__sidenav" 200px
+    "main__title main__text main__sidenav" 200px
+    / 200px 200px 200px;
+}
+
+.main div {
+    width: 200px;
+}
+
+.main__cover {
+    background-color: blue;
+}
+
+.main__title {
+    background-color: red;
+}
+
+.main__text {
+    background-color: green;
+}
+
+.main__sidenav{
+    background-color: yellow;
+}
+
